@@ -59,12 +59,11 @@ footer.dark{
 }
 
 footer p{
-    font-size: 16px;
+    font-size: 13px;
 }
 
 body{
     min-height: 100vh;
-    justify-content: 100vh;
     background: var(--body-color);
     transition: var(--tran-04);
     display: flex;
@@ -80,6 +79,8 @@ body.dark{
     --text-color: #CCC;
 }
 
+
+/******************************** Sidebar ********************************/
 .sidebar{
     position: fixed;
     top: 0;
@@ -326,8 +327,6 @@ body.dark .switch::before{
 }
 
 
-
-
 /******************************** Colores del resto ********************************/
 .main{
     position: relative;
@@ -350,8 +349,8 @@ body.dark .switch::before{
     width: calc(100% - 88px);
 }
 
-/******************************** Index ********************************/
 
+/******************************** Index ********************************/
 .home{
     padding-bottom: 60px;
 }
@@ -439,6 +438,7 @@ body.dark .switch::before{
     margin: 0;
 }
 
+
 /******************************* Trabajos ********************************/
 .presentacion{
     width: 100%;
@@ -466,9 +466,7 @@ body.dark .switch::before{
 }
 
 
-
 /******************************* Cards ********************************/
-
 .cards {
     width: 100%;
     height: fit-content;
@@ -482,7 +480,8 @@ body.dark .switch::before{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 70px;
+    column-gap: 70px;
+    row-gap: 5px;
 }
   
 .card {
@@ -510,9 +509,6 @@ body.dark .switch::before{
 .card-image, .card-image img{
     min-height: 170px;
     border-radius: 15px;
-    /*background: #313131;
-    box-shadow: inset 5px 5px 3px #2f2f2f,
-                inset -5px -5px 3px #333333;*/
 }
 
 .card-image img{
@@ -540,20 +536,8 @@ body.dark .switch::before{
 
 
 /******************************** @Medias ********************************/
-@media (max-width: 1270px) {
-    .cards-container {
-      grid-template-columns: repeat(2, minmax(100px, 1fr));
-    }
-}
-
-@media (max-width: 870px) {
-    .cards-container {
-      grid-template-columns: repeat(1, minmax(100px, 1fr));
-    }
-}
-
 @media (max-width:788px){
-        .presentacion h2:before {
+    .presentacion h2:before {
         content: attr(data-phonetext);
     }
 }
@@ -574,13 +558,6 @@ body.dark .switch::before{
     }
 }
 
-@media (max-width: 560px){
-
-    footer p{
-        font-size: 12px;
-    }
-}
-
 @media (max-width: 450px) {
     .home h1{
         font-size: 20px;
@@ -595,12 +572,10 @@ body.dark .switch::before{
     }
 
     footer p{
-        font-size: 10px;
+        font-size: 2.5vw;
     }
-}
 
-@media (max-width: 380px){
-    footer p{
-        font-size: 8px;
+    .texto_responsive-cambio{
+        font-size: 28px;
     }
 }

@@ -62,6 +62,7 @@ window.onload = (event) => {
         main = document.querySelector(".main"),
         toggle = body.querySelector(".toggle"),
         searchBtn = body.querySelector(".search-box"),
+        navIco = body.querySelector(".nav-ico"),
         modeSwitch = body.querySelector('.toggle-switch'),
         modeText = body.querySelector(".mode-text"),
         formulario = document.querySelector("#formulario");
@@ -74,7 +75,12 @@ window.onload = (event) => {
     searchBtn.addEventListener("click", () => {
         sidebar.classList.remove("close");
         main.classList.remove("close");
-    });      
+    });
+
+    navIco.addEventListener("click", () => {
+        sidebar.classList.remove("close");
+        main.classList.remove("close");
+    });    
 
     modeSwitch.addEventListener("click", ()=>{
         body.classList.toggle("dark");

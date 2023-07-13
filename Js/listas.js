@@ -15,7 +15,7 @@ let Trabajos = [
       date: "7/6/2023",
       curso: "4IC",
       author: "Armeno - Dawidowicz",
-      img: "Assets/Images/bandas/armeno-dawidowicz.png",
+      img: "Assets/Images/Bandas/armeno-dawidowicz.webp",
       category: "Bandas",
     },
     {
@@ -26,7 +26,7 @@ let Trabajos = [
       date: "7/6/2023",
       curso: "4IC",
       author: "Cottet - Lewin",
-      img: "Assets/Images/bandas/cottet-lewin.png",
+      img: "Assets/Images/Bandas/cottet-lewin.webp",
       category: "Bandas",
     },
     {
@@ -37,7 +37,7 @@ let Trabajos = [
       date: "7/6/2023",
       curso: "4IC",
       author: "Kupersmid - Izbicki",
-      img: "Assets/Images/bandas/kupersmid-izbicki.png",
+      img: "Assets/Images/Bandas/kupersmid-izbicki.webp",
       category: "Bandas",
     },
     {
@@ -48,7 +48,7 @@ let Trabajos = [
       date: "7/6/2023",
       curso: "4IC",
       author: "Chmielevsky - Naccache",
-      img: "Assets/Images/bandas/chmielevsky-naccache.png",
+      img: "Assets/Images/Bandas/chmielevsky-naccache.webp",
       category: "Bandas",
     },
     {
@@ -59,7 +59,7 @@ let Trabajos = [
       date: "7/6/2023",
       curso: "4IC",
       author: "Ramasso - Dominguez",
-      img: "Assets/Images/bandas/ramasso-dominguez.png",
+      img: "Assets/Images/Bandas/ramasso-dominguez.webp",
       category: "Bandas",
     },
     {
@@ -70,7 +70,7 @@ let Trabajos = [
       date: "7/6/2023",
       curso: "4IC",
       author: "Biderman - Szabo - Giraudi",
-      img: "Assets/Images/bandas/biderman-szabo-giraudi.png",
+      img: "Assets/Images/Bandas/biderman-szabo-giraudi.webp",
       category: "Bandas",
     },
     {
@@ -81,7 +81,7 @@ let Trabajos = [
       date: "7/6/2023",
       curso: "4IC",
       author: "Gajer - Cohen",
-      img: "Assets/Images/bandas/gajer-cohen.png",
+      img: "Assets/Images/Bandas/gajer-cohen.webp",
       category: "Bandas",
     },
     {
@@ -92,7 +92,7 @@ let Trabajos = [
       date: "7/6/2023",
       curso: "4IC",
       author: "Brunstein - Kaltman",
-      img: "Assets/Images/bandas/brunstein-kaltman.png",
+      img: "Assets/Images/Bandas/brunstein-kaltman.webp",
       category: "Bandas",
     },
   ];
