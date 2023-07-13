@@ -10,7 +10,7 @@ let Trabajos = [
     {
       id: 0,
       title: "Queen",
-      desc: "Queen es una banda británica de rock formada en 1970 en Londres, integrada por el cantante y pianista Freddie Mercury, el guitarrista Brian May, el baterista Roger Taylor y el bajista John Deacon.",
+      desc: "Queen es una banda británica de rock formada en 1970 en Londres, integrada por Freddie Mercury, Brian May, Roger Taylor y John Deacon.",
       link: "https://tp02-armeno-dawidowicz.netlify.app/",
       date: "7/6/2023",
       curso: "4IC",
@@ -76,7 +76,7 @@ let Trabajos = [
     {
       id: 6,
       title: "Queen",
-      desc: "Queen es una banda británica de rock formada en 1970 en Londres, integrada por el cantante y pianista Freddie Mercury, el guitarrista Brian May, el baterista Roger Taylor y el bajista John Deacon.",
+      desc: "Queen es una banda británica de rock formada en 1970 en Londres, integrada por Freddie Mercury, Brian May, Roger Taylor y John Deacon.",
       link: "https://tp2gajercohen.netlify.app/",
       date: "7/6/2023",
       curso: "4IC",
