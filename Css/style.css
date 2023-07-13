@@ -447,11 +447,16 @@ body.dark .switch::before{
     position: relative;
 }
 
-.presentacion h1{
+.presentacion h2{
+    width: 100%;
     text-align: center;
 }
 
-.presentacion h1::after {
+.presentacion h2:before{
+    content: attr(data-desktoptext);
+}
+
+.presentacion h2::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -459,6 +464,8 @@ body.dark .switch::before{
     width: 80%;
     border-bottom: solid;
 }
+
+
 
 /******************************* Cards ********************************/
 
@@ -471,14 +478,11 @@ body.dark .switch::before{
 }
   
 .cards-container {
-    width: 90%;
-    height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(400px, min-content));
-    gap: 10px;
-    justify-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    gap: 70px;
 }
   
 .card {
@@ -542,15 +546,15 @@ body.dark .switch::before{
     }
 }
 
-@media (max-width: 1100px){
-    .home .tecnologias .images {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
 @media (max-width: 870px) {
     .cards-container {
       grid-template-columns: repeat(1, minmax(100px, 1fr));
+    }
+}
+
+@media (max-width:788px){
+    .presentacion h2:before {
+        content: attr(data-phonetext);
     }
 }
 
@@ -564,9 +568,6 @@ body.dark .switch::before{
 }
 
 @media (max-width: 560px){
-    .home .tecnologias .images {
-        grid-template-columns: repeat(2, 1fr);
-    }
 
     footer p{
         font-size: 12px;
@@ -580,10 +581,6 @@ body.dark .switch::before{
 
     .home h2{
         font-size: 17px;
-    }
-
-    .home .tecnologias .images {
-        grid-template-columns: repeat(1, 1fr);
     }
 
     .card{
