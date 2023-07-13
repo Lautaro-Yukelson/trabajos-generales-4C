@@ -553,7 +553,7 @@ body.dark .switch::before{
 }
 
 @media (max-width:788px){
-    .presentacion h2:before {
+        .presentacion h2:before {
         content: attr(data-phonetext);
     }
 }
@@ -564,6 +564,13 @@ body.dark .switch::before{
     }
     .home h2{
         font-size: 20px;
+    }
+}
+
+@media (max-width: 620px){
+    .main{
+        width: 100%;
+        left: 0;
     }
 }
 

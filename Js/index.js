@@ -1,68 +1,20 @@
 import { Categorias, Trabajos } from './listas.js';
 
-function createNavbar() {
-    const navbar = document.createElement('nav');
-    navbar.className = 'sidebar close';
-    navbar.innerHTML = `
-      <header>
-          <div class="image-text">
-              <span class="image">
-                  <img src="assets/images/logo.png" alt="Logo">
-              </span>
-              <div class="text header-text">
-                  <span class="name">ORT Almagro</span>
-                  <span class="description">4 Info C</span>
-              </div>
-          </div>
-          <i class="bx bx-chevron-right toggle"></i>
-      </header>
-      <div class="menu-bar">
-          <div class="menu">
-              <li class="search-box">
-                  <i class="bx bx-search icon"></i>
-                  <input type="search" id="formulario" placeholder="Buscar...">
-                  <button id="boton" hidden></button>
-              </li>
-              <ul class="menu-links">
-                  <li class="nav-link">
-                      <a href="index.html">
-                          <i class="bx bx-home-alt icon"></i>
-                          <span class="text nav-text">Inicio</span>
-                      </a>
-                  </li>
-                  ${Categorias.map(
-                      (categoria) => `
-                          <li class="nav-link">
-                              <a href="trabajos.html">
-                                  <i class="bx ${categoria.icon} icon"></i>
-                                  <span class="text nav-text">${categoria.name}</span>
-                              </a>
-                          </li>
-                      `
-                  ).join('')}
-              </ul>
-          </div>
-          <div class="bottom-content">
-              <li class="mode">
-                  <div class="moon-sun">
-                      <i class="bx bx-moon icon moon"></i>
-                      <i class="bx bx-sun icon sun"></i>
-                  </div>
-                  <span class="mode-text text">Modo Claro</span>
-                  <div class="toggle-switch">
-                      <span class="switch"></span>
-                  </div>
-              </li>
-          </div>
-      </div>
-    `;
-    return navbar;
-}
+function completeNavbar() {
+    const menuLinks = document.querySelector('.menu-links');
+    menuLinks.innerHTML += `
+            ${Categorias.map(
+                (categoria) => `
+                    <li class="nav-link">
+                        <a href="trabajos.html">
+                            <i class="bx ${categoria.icon} icon"></i>
+                            <span class="text nav-text">${categoria.name}</span>
+                        </a>
+                    </li>
+                `
+            ).join('')}
 
-function insertNavbar() {
-    const container = document.getElementById("navbar-placeholder");
-    const navbar = createNavbar();
-    container.appendChild(navbar);
+    `;
 }
 
 function agregarTrabajo(trabajo){
@@ -103,16 +55,16 @@ function filtrar() {
 }
 
 window.onload = (event) => {
-    insertNavbar();
-    const body = document.querySelector("body");
-    const footer = document.querySelector("footer");
-    const sidebar = document.querySelector(".sidebar");
-    const main = document.querySelector(".main");
-    const toggle = body.querySelector(".toggle");
-    const searchBtn = body.querySelector(".search-box");
-    const modeSwitch = body.querySelector('.toggle-switch');
-    const modeText = body.querySelector(".mode-text");
-    const formulario = document.querySelector("#formulario");
+    completeNavbar();
+    const body = document.querySelector("body"),
+        footer = document.querySelector("footer"),
+        sidebar = document.querySelector(".sidebar"),
+        main = document.querySelector(".main"),
+        toggle = body.querySelector(".toggle"),
+        searchBtn = body.querySelector(".search-box"),
+        modeSwitch = body.querySelector('.toggle-switch'),
+        modeText = body.querySelector(".mode-text"),
+        formulario = document.querySelector("#formulario");
 
     toggle.addEventListener("click", () => {
         sidebar.classList.toggle("close");
@@ -138,6 +90,3 @@ window.onload = (event) => {
     formulario.addEventListener('keyup', filtrar);
     filtrar();
 };
-
-
-
