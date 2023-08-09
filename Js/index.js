@@ -93,6 +93,8 @@ window.onload = (event) => {
         }
     });
 
+    //document.body.style.backgroundImage = "url('../Assets/Images/Fondos/' + temp + ')";
+
     boton.addEventListener('click', filtrar);
     formulario.addEventListener('keyup', filtrar);
     filtrar();
