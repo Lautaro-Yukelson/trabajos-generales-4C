@@ -3,17 +3,16 @@ import { Categorias, Trabajos } from './listas.js';
 function completeNavbar() {
     const menuLinks = document.querySelector('.menu-links');
     menuLinks.innerHTML += `
-            ${Categorias.map(
-                (categoria) => `
-                    <li class="nav-link">
-                        <a href="trabajos.html">
-                            <i class="bx ${categoria.icon} icon"></i>
-                            <span class="text nav-text">${categoria.name}</span>
-                        </a>
-                    </li>
-                `
-            ).join('')}
-
+        ${Categorias.map(
+            (categoria) => `
+                <li class="nav-link">
+                    <a href="trabajos.html?category=${categoria.name}">
+                        <i class="bx ${categoria.icon} icon"></i>
+                        <span class="text nav-text">${categoria.name}</span>
+                    </a>
+                </li>
+            `
+        ).join('')}
     `;
 }
 
@@ -41,10 +40,12 @@ function filtrar() {
     let existe = false;
     
     cardsContainer.innerHTML = ``;
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedCategory = urlParams.get('category');
         
     for (let trabajo of Trabajos) {
       let title = trabajo.title.toLowerCase();
-      if (title && title.indexOf(texto) !== -1) {
+      if (title && title.indexOf(texto) !== -1 && trabajo.category == selectedCategory) {
         existe = true;
         agregarTrabajo(trabajo);
       }
